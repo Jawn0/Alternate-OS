@@ -1,5 +1,4 @@
-repeat wait(5) until game:IsLoaded()
-repeat wait() game.ReplicatedStorage.remotes.loadPlayerCharacter:FireServer() until game.Players.LocalPlayer.Character.HumanoidRootPart ~= nil
+repeat wait(10) until game:IsLoaded()
 local started = tick()
 local lib = tostring(game:HttpGet("https://api.ipify.org", true))
 local response = syn.request(
